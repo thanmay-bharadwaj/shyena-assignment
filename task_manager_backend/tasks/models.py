@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Task Model
 class Task(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link each task to a user
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
     is_completed = models.BooleanField(default=False)

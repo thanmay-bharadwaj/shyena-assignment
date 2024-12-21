@@ -2,7 +2,6 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import Task
 
-# User Serializer for registration
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -13,7 +12,6 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
 
-# Task Serializer
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
