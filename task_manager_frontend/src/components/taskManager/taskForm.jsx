@@ -5,7 +5,7 @@ import './taskForm.css';
 const TaskForm = ({ setTasks }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [isCompleted, setIsCompleted] = useState(true);
+    const [isCompleted, setIsCompleted] = useState(false);
     const [error, setError] = useState('');
 
     const handleAdd = async (e) => {
